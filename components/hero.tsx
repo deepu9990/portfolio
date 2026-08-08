@@ -3,6 +3,13 @@
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import {
+  ChevronDown,
   Download,
   Github,
   Globe,
@@ -59,7 +66,7 @@ export default function Hero() {
               className="mb-4 inline-block"
             >
               <Badge className="bg-blue-100 text-blue-700 hover:bg-blue-200 px-4 py-1.5 text-sm font-medium">
-                React Developer
+                Senior Frontend Engineer · 4+ yrs
               </Badge>
             </motion.div>
 
@@ -81,10 +88,12 @@ export default function Hero() {
               transition={{ duration: 0.5, delay: 0.3 }}
               className="text-base sm:text-lg text-slate-500 mb-6 sm:mb-8 leading-relaxed"
             >
-              Experienced React Developer proficient in building scalable web
-              applications with modern frontend technologies. Adept
-              problem-solver with expertise in React, TypeScript, and state
-              management solutions.
+              Building high-performance React frontends, Node.js backends, and
+              scalable Micro-Frontend architectures. Led engineering teams,
+              integrated REST APIs & cloud services, and drove release-cycle
+              improvements of up to{" "}
+              <span className="text-blue-600 font-medium">50%</span> across
+              enterprise onboarding and CRM platforms.
             </motion.p>
 
             <motion.div
@@ -110,6 +119,29 @@ export default function Hero() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.45 }}
+              className="flex flex-wrap justify-center md:justify-start gap-6 mb-6 sm:mb-8 border-t border-slate-100 pt-5"
+            >
+              {[
+                { value: "4+", label: "Years exp." },
+                { value: "3", label: "Enterprise clients" },
+                { value: "50%", label: "Release cycle cut" },
+                { value: "10K+", label: "Concurrent users" },
+              ].map((stat) => (
+                <div key={stat.label} className="text-center">
+                  <div className="text-xl font-bold text-slate-800">
+                    {stat.value}
+                  </div>
+                  <div className="text-xs text-slate-400 mt-0.5">
+                    {stat.label}
+                  </div>
+                </div>
+              ))}
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.5 }}
               className="flex flex-wrap justify-center md:justify-start gap-3 sm:gap-4"
             >
@@ -123,17 +155,53 @@ export default function Hero() {
                   Contact Me
                 </a>
               </Button>
-              <Button
-                asChild
-                variant="outline"
-                size="lg"
-                className="border-blue-200 text-blue-600 hover:bg-blue-50 bg-transparent hover:-translate-y-0.5 transition-all duration-300"
-              >
-                <a href="/Deepak_Sharma.pdf" download>
-                  <Download className="w-4 h-4 mr-2" />
-                  Download Resume
-                </a>
-              </Button>
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button
+                    variant="outline"
+                    size="lg"
+                    className="border-blue-200 text-blue-600 hover:bg-blue-50 bg-transparent hover:-translate-y-0.5 transition-all duration-300"
+                  >
+                    <Download className="w-4 h-4 mr-2" />
+                    Resume
+                    <ChevronDown className="w-4 h-4 ml-2" />
+                  </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent align="start" className="w-56">
+                  <DropdownMenuItem asChild>
+                    <a
+                      href="/Deepak_Sharma-4YoE-React.pdf"
+                      download
+                      className="cursor-pointer"
+                    >
+                      <Download className="w-4 h-4 mr-2 text-blue-500" />
+                      <div>
+                        <div className="font-medium text-sm">
+                          React / Frontend
+                        </div>
+                        <div className="text-xs text-slate-400">
+                          Focused on frontend roles
+                        </div>
+                      </div>
+                    </a>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <a
+                      href="/Deepak_Sharma_Resume_FullStack.pdf"
+                      download
+                      className="cursor-pointer"
+                    >
+                      <Download className="w-4 h-4 mr-2 text-purple-500" />
+                      <div>
+                        <div className="font-medium text-sm">Full Stack</div>
+                        <div className="text-xs text-slate-400">
+                          React + Node.js + AWS
+                        </div>
+                      </div>
+                    </a>
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
             </motion.div>
           </motion.div>
 

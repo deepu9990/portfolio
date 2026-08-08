@@ -58,8 +58,13 @@ export default function Navigation() {
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
-          <div className="font-semibold text-xl text-slate-800">
-            Deepak Sharma
+          <div className="flex items-center gap-2">
+            <span className="w-8 h-8 rounded bg-gradient-to-br from-blue-600 to-purple-600 flex items-center justify-center text-white text-xs font-bold tracking-tight">
+              DS
+            </span>
+            <span className="font-semibold text-lg text-slate-800">
+              deepak.dev
+            </span>
           </div>
 
           <div className="hidden md:flex space-x-8">

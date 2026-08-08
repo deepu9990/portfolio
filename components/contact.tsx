@@ -3,7 +3,13 @@
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Download, Linkedin, Mail, Phone } from "lucide-react";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { ChevronDown, Download, Linkedin, Mail, Phone } from "lucide-react";
 import { motion } from "framer-motion";
 
 const contactInfo = [
@@ -136,13 +142,54 @@ export default function Contact() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.5, delay: 0.3 }}
+            className="flex flex-col sm:flex-row items-center justify-center gap-4"
           >
-            <Button asChild size="lg" className="bg-blue-600 hover:bg-blue-700">
-              <a href="/Deepak_Sharma.pdf" download>
-                <Download className="w-5 h-5 mr-2" />
-                Download Resume
-              </a>
-            </Button>
+            <p className="text-slate-400 text-sm">
+              Download resume for your role:
+            </p>
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
+                  <Download className="w-5 h-5 mr-2" />
+                  Download Resume
+                  <ChevronDown className="w-4 h-4 ml-2" />
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="center" className="w-60">
+                <DropdownMenuItem asChild>
+                  <a
+                    href="/Deepak_Sharma-4YoE-React.pdf"
+                    download
+                    className="cursor-pointer"
+                  >
+                    <Download className="w-4 h-4 mr-2 text-blue-500" />
+                    <div>
+                      <div className="font-medium text-sm">
+                        React / Frontend
+                      </div>
+                      <div className="text-xs text-slate-400">
+                        Focused on frontend roles
+                      </div>
+                    </div>
+                  </a>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <a
+                    href="/Deepak_Sharma_Resume_FullStack.pdf"
+                    download
+                    className="cursor-pointer"
+                  >
+                    <Download className="w-4 h-4 mr-2 text-purple-500" />
+                    <div>
+                      <div className="font-medium text-sm">Full Stack</div>
+                      <div className="text-xs text-slate-400">
+                        React + Node.js + AWS
+                      </div>
+                    </div>
+                  </a>
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
           </motion.div>
         </div>
       </div>

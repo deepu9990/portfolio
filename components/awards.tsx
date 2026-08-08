@@ -8,6 +8,12 @@ import { motion } from "framer-motion";
 const awards = [
   {
     title: "Employee of the Quarter",
+    period: "Q4 2025",
+    description:
+      "Awarded for high-impact delivery across onboarding and CRM initiatives with measurable improvements in release quality and speed.",
+  },
+  {
+    title: "Employee of the Quarter",
     period: "Q4 2023",
     description:
       "Recognized for outstanding performance and contributions to team success",

@@ -22,44 +22,78 @@ interface Job {
 
 const experience: Job[] = [
   {
-    title: "Senior Software Engineer L1",
+    title: "Software Engineer Trainee",
     company: "Gemini Solutions",
-    location: "Gurgaon, India",
-    period: "Jul 2024 - Present",
-    client: "Real Estate Enterprise – Helpdesk Portals & Internal Tools",
+    location: "Gurgaon",
+    period: "Jan 2022 – Jul 2022",
+    client: "Internal Platforms – Foundation & Delivery",
     achievements: [
-      "Built a scalable React app from scratch with TypeScript and Vite, implementing smart module loading and Lottie-based animations for seamless UX.",
-      "Created a JSON-driven Form Builder with 100+ dynamic helpdesk flows and full admin control over form logic and validations.",
-      "Developed a secure Node.js middleware using JWT for role-based access, with a fallback to Fetch API when Axios failed in production.",
-      "Optimized UI performance by memoizing components, lazy loading routes, and compressing assets for a faster initial load.",
+      "Contributed to React-based UI modules and reusable component patterns for internal web applications.",
+      "Supported Node.js/Express API development, validation flows, and bug fixes across onboarding and CRM modules.",
+      "Strengthened fundamentals in Git workflows, code review practices, and production release processes.",
+    ],
+  },
+  {
+    title: "Software Engineer",
+    company: "Gemini Solutions",
+    location: "Gurgaon",
+    period: "Jul 2022 – Mar 2024",
+    client: "Sharemeister – Ahura & Athletic Estate",
+    achievements: [
+      "Developed cross-platform applications using React, TypeScript, and Node.js/Express with modular architecture.",
+      "Engineered WebRTC video chat backend flows with automated FFmpeg transcoding and AWS S3 storage.",
+      "Optimized REST APIs and PostgreSQL queries via indexing and refactoring for faster response times.",
     ],
   },
   {
     title: "Software Engineer L2",
     company: "Gemini Solutions",
-    location: "Gurgaon, India",
-    period: "Apr 2023 – Jun 2024",
-    client: "Insurance CRM SaaS Platform – Serverless Microservices & Frontend",
+    location: "Gurgaon",
+    period: "Apr 2024 – Mar 2025",
+    client: "Tata AIG Insurance – CRM Platform",
     achievements: [
-      "Architected and deployed a scalable serverless backend using AWS Lambda, API Gateway, and SQS for decoupled, event-driven workflows.",
-      "Built a modular micro-frontend with Webpack 5 Module Federation and deployed it on EC2 behind Nginx.",
-      "Migrated legacy systems to modern React apps with improved UX, reusable components, and centralized API utilities.",
-      "Set up S3-based asset hosting with CloudFront CDN for faster global delivery and caching.",
+      "Designed and deployed serverless microservices using AWS Lambda, API Gateway, SQS, and EventBridge — handled 5x traffic spikes.",
+      "Built Micro-Frontend UIs with React, Webpack 5, and Module Federation; integrated backend services via REST APIs.",
+      "Implemented a secure, event-driven MongoDB architecture processing 100K+ daily transactions.",
     ],
   },
   {
     title: "Software Engineer L1",
     company: "Gemini Solutions",
-    location: "Gurgaon, India",
-    period: "Jan 2022 – Apr 2023",
-    client:
-      "Tech Startup – E-Commerce, Services, Investment & Community Domains",
+    location: "Gurgaon",
+    period: "Jul 2022 – Mar 2024",
+    client: "Emaar Group – Helpdesk Tool",
     achievements: [
-      "Worked on 5 cross-platform applications using React, TypeScript, Tailwind CSS, and Vite, with a modular architecture and consistent routing/layout systems.",
-      "Created REST APIs with Node.js/Express and handled PostgreSQL-based workflows for both transactional and analytical needs.",
-      "Integrated WebRTC for real-time video chat, with automated recording, cloud storage, and FFmpeg-based format conversion.",
-      "Deployed assets via AWS S3, CloudFront, and Route53; contributed to Docker-based CI/CD using Bitbucket Pipelines.",
-      "Optimized APIs and DB queries for key modules, reducing response time by 60%, and scaled infra to support 10K+ concurrent users for live events.",
+      "Designed a JSON-driven form builder backed by Node.js/Express APIs — enabled 100+ configurable workflows, cut dev time by 40%.",
+      "Led a team of 6 through Agile sprints; established code review and API design standards that reduced production bugs by 25%.",
+      "Implemented Micro-Frontend + microservices architecture with Webpack 5 Module Federation, cutting release cycles by 50%.",
+      "Owned the CI/CD pipeline & Nginx config (99.9% uptime); raised backend test coverage from 45% → 85% with Jest.",
+    ],
+  },
+  {
+    title: "Senior Software Engineer L1",
+    company: "Gemini Solutions",
+    location: "Gurgaon",
+    period: "Apr 2025 – Mar 2026",
+    client: "Tata AIG – User Management and Onboarding Platform",
+    achievements: [
+      "Architected and scaled frontend modules with React, TypeScript, and Redux for onboarding journeys used by enterprise operations.",
+      "Automated Aadhaar, PAN, and document verification integrations, removing 80% manual entry and 40% duplicate code.",
+      "Implemented role-based access flows and real-time approval notifications with WebSocket-driven status updates.",
+      "Partnered with UX, QA, and backend teams to release stable features with zero post-release regressions.",
+    ],
+  },
+  {
+    title: "Senior Software Engineer L2",
+    company: "Gemini Solutions",
+    location: "Gurgaon",
+    period: "Apr 2026 – Present",
+    client: "Tata AIG – User Management & Onboarding Platform",
+    achievements: [
+      "Architected the onboarding platform's frontend and backend using React, Node.js/Express, and MongoDB — cut onboarding time by 60%.",
+      "Built REST APIs for Aadhaar, PAN, and document verification, eliminating 80% of manual data entry and 40% of duplicate code.",
+      "Implemented Role-Based Access Control at the API layer with WebSocket-driven notifications for real-time approval & status updates.",
+      "Shipped zero post-release regressions by collaborating closely with frontend and QA teams on production-grade feature delivery.",
     ],
   },
 ];
@@ -83,8 +117,8 @@ export default function Experience() {
               Work Experience
             </h2>
             <p className="text-slate-500 text-base sm:text-lg max-w-2xl mx-auto">
-              My professional journey building scalable applications and leading
-              development teams
+              4+ years building enterprise-grade platforms across insurance,
+              real estate, and e-commerce domains
             </p>
           </motion.div>
 

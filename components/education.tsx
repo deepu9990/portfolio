@@ -51,7 +51,7 @@ export default function Education() {
                     <div className="flex flex-wrap items-center gap-2 sm:gap-4">
                       <div className="flex items-center gap-2 text-slate-500 text-sm">
                         <Calendar className="w-4 h-4" />
-                        <span>2017 – 2021</span>
+                        <span>2018 – 2022</span>
                       </div>
                       <Badge
                         variant="outline"
